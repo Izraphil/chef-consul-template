@@ -12,34 +12,31 @@ Installs and configures [consul-template](https://github.com/hashicorp/consul-te
 
 ## Supported Platforms
 
-- Ubuntu 14.04, 12.04
-- Debian 8.2, 7.9, 6.0.10
-- Centos 7.2, 6.7
-- Arch Linux
+* Ubuntu 16.04
 
 ## Attributes
 
-- `node['consul_template']['base_url']` - Base URL for consul-template binary files
-- `node['consul_template']['version']` - Version of consul-template to install.
+* `node['consul_template']['base_url']` - Base URL for consul-template binary files
+* `node['consul_template']['version']` - Version of consul-template to install.
   Used to determine which binary to grab from the base_url.
-- `node['consul_template']['install_method']` - How consul-template should be
+* `node['consul_template']['install_method']` - How consul-template should be
   installed. Supports 'binary' or 'source'.
-- `'node['consul_template']['install_dir']` - Directory where consul-template
+* `'node['consul_template']['install_dir']` - Directory where consul-template
   should be installed.
-- `node['consul_template']['checksums']` - Contains a hash of checksums where
+* `node['consul_template']['checksums']` - Contains a hash of checksums where
   the key is the file for a given OS/architecture, and the value is the
   associated checksum. For example, `consul-template_0.3.1_linux_amd64`.
-- `node['consul_template']['source_revision']` - When installing from source,
+* `node['consul_template']['source_revision']` - When installing from source,
   this determines the revision it should use.
-- `node['consul_template']['config_dir']` - The directory that contains the
+* `node['consul_template']['config_dir']` - The directory that contains the
   configuration files for consul-template.
-- `node['consul_template']['init_style']` - Defines the init system that the
+* `node['consul_template']['init_style']` - Defines the init system that the
   consul-template service should use. Supports 'init', 'runit', or 'systemd'.
-- `node['consul_template']['service_user']` - Defines the user that should be
+* `node['consul_template']['service_user']` - Defines the user that should be
   used for the consul-template service.
-- `node['consul_template']['service_group']` - Defines the group that should be
+* `node['consul_template']['service_group']` - Defines the group that should be
   used for the consul-template service.
-- `node['consul_template']['template_mode']` - File permissions mode for all
+* `node['consul_template']['template_mode']` - File permissions mode for all
   consul-template configuration files.
 
 ## Recipes
@@ -87,11 +84,11 @@ end
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Added some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create new Pull Request
+1.  Fork it
+2.  Create your feature branch (git checkout -b my-new-feature)
+3.  Commit your changes (git commit -am 'Added some feature')
+4.  Push to the branch (git push origin my-new-feature)
+5.  Create new Pull Request
 
 ### Adding checksums for new versions
 
